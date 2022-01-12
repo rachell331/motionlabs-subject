@@ -3,7 +3,7 @@
 - [ ] Add Features
 - [ ] Refactor
 - [ ] Fix Bug
-- [ ] Modify Convention
+- [ ] Modify
 - [ ] Remove Files
 
 <br />
