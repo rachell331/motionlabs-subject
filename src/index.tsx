@@ -7,11 +7,10 @@ import theme from "./styles/theme";
 
 ReactDOM.render(
   <>
-    <GlobalStyle>
-      <ThemeProvider theme={theme}>
-        <App />
-      </ThemeProvider>
-    </GlobalStyle>
+    <GlobalStyle />
+    <ThemeProvider theme={theme}>
+      <App />
+    </ThemeProvider>
   </>,
   document.getElementById("root")
 );
