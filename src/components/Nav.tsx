@@ -5,11 +5,9 @@ import styled from "styled-components";
 export const Nav = () => {
   return (
     <Container>
-      <Title>
-        <Link to="/" className="anchor">
-          Motionlabs
-        </Link>
-      </Title>
+      <Link to="/">
+        <Title>Motionlabs</Title>
+      </Link>
     </Container>
   );
 };
@@ -20,20 +18,13 @@ const Container = styled.nav`
 `;
 
 const Title = styled.h1`
-  width: 100%;
-  max-width: 600px;
-  margin: 0 auto;
   color: ${({ theme }) => theme.fontWhite};
+  font-weight: 900;
+  font-size: 1.75rem;
   line-height: 70px;
+  cursor: pointer;
 
-  .anchor {
-    text-decoration: underline #00f 2px;
-    font-weight: 900;
-    font-size: 1.75rem;
-    cursor: pointer;
-
-    &:hover {
-      text-decoration-color: #f00;
-    }
+  &:hover {
+    text-decoration: underline;
   }
 `;
