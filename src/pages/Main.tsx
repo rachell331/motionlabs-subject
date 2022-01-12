@@ -22,10 +22,8 @@ export const Main = () => {
 };
 
 const Container = styled.div`
-  width: 100%;
-  max-width: 600px;
+  ${({ theme }) => theme.wrapper};
   height: 100vh;
-  margin: 0 auto;
   padding: 60px 40px 0;
 `;
 

@@ -18,9 +18,7 @@ const Container = styled.nav`
 `;
 
 const Title = styled.h1`
-  width: 100%;
-  max-width: 600px;
-  margin: 0 auto;
+  ${({ theme }) => theme.wrapper}
   color: ${({ theme }) => theme.fontWhite};
   font-weight: 900;
   font-size: 1.75rem;
