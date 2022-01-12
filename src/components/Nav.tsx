@@ -24,7 +24,18 @@ const Title = styled.h1`
   line-height: 70px;
   cursor: pointer;
 
-  &:hover {
-    text-decoration: underline;
+  .anchor {
+    text-decoration: underline #00f 2px;
+    font-weight: 900;
+    font-size: 1.75rem;
+    cursor: pointer;
+
+    &:visited {
+      color: ${({ theme }) => theme.fontWhite};
+    }
+
+    &:hover {
+      text-decoration-color: #f00;
+    }
   }
 `;
