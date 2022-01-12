@@ -1,7 +1,5 @@
-import React, { FC } from "react";
+import React from "react";
 
-interface Props {}
-
-export const Main: FC = (props: Props) => {
+export const Main = () => {
   return <div></div>;
 };
