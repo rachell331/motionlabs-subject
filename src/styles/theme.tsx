@@ -14,4 +14,30 @@ export const theme: ThemeProps = {
     margin: "0 auto",
     backgroundColor: "#ffffff",
   },
+
+  flexCenter: {
+    display: "flex",
+    justifyContnet: "center",
+    alignItems: "center",
+  },
+
+  positionRelativeTop: {
+    position: "relative",
+    top: 0,
+    left: 0,
+  },
+
+  positionRelativeCenter: {
+    position: "relative",
+    top: "50%",
+    left: "50%",
+    trasnform: "translate(-50%, -50%)",
+  },
+
+  positionAbsoluteCenter: {
+    position: "absolute",
+    top: "50%",
+    left: "50%",
+    trasnform: "translate(-50%, -50%)",
+  },
 };
