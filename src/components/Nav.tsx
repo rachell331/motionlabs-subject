@@ -13,8 +13,12 @@ export const Nav = () => {
 };
 
 const Container = styled.nav`
+  position: fixed;
+  top: 0;
+  width: 100%;
   height: 70px;
   background-color: #000;
+  z-index: 10000;
 `;
 
 const Title = styled.h1`
