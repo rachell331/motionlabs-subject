@@ -36,7 +36,7 @@ export const Report = () => {
           <Unit>활동 기간, 시작일</Unit>
         </IndexBox>
         <LineChart userData={userData} />
-        <BarChart userData={userData} />
+        <BarChart userData={userData} periodData={[]} />
       </ChartWrapper>
     </Container>
   );

@@ -5,9 +5,18 @@ import { UserDataType } from "../Report";
 interface UserProps {
   user: UserDataType;
   index: number;
+  periodData: number[];
+  max: number;
+  findMaxValue: (arr: number[]) => number;
 }
 
-export const Bar = ({ user, index }: UserProps) => {
+interface RectangleProps {
+  period: number;
+  getHeightArr: number[];
+  index: number;
+}
+
+export const Bar = ({ user, index, periodData }: UserProps) => {
   const changeDateFormat = (date: string) => {
     const month: string = date.slice(-5, -3);
     const day: string = date.slice(-2);
@@ -15,10 +24,22 @@ export const Bar = ({ user, index }: UserProps) => {
     return newDateString;
   };
 
+  const findMaxValue = (arr: number[]) => {
+    const maxValue: number = Math.max.apply(null, arr);
+    return maxValue;
+  };
+
+  const max: number = findMaxValue(periodData);
+  const getHeightArr: number[] = periodData.map((item) => item / max);
+
   return (
     <Container index={index}>
       <Period>{user.period}일</Period>
-      <Rectangle period={user.period} />
+      <Rectangle
+        period={user.period}
+        getHeightArr={getHeightArr}
+        index={index}
+      />
       <StartDate>{changeDateFormat(user.startDate)}</StartDate>
     </Container>
   );
@@ -37,13 +58,14 @@ const Period = styled.p`
   text-align: center;
 `;
 
-const Rectangle = styled.div<{ period: number }>`
+const Rectangle = styled.div<RectangleProps>`
   width: 30px;
-  height: ${(props) => `calc(${props.period} * 10px)`};
+  height: ${(props) => `calc(160px * ${props.getHeightArr[props.index]})`};
   background-color: ${({ theme }) => theme.mainColor};
   border-radius: 8px;
 `;
 
 const StartDate = styled.p`
-  margin: 4px 0 20px;
+  margin: 8px 0 20px;
+  text-align: center;
 `;
