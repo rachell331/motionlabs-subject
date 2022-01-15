@@ -5,13 +5,25 @@ import { UserDataType } from "./Report";
 
 interface UserProps {
   userData: UserDataType[];
+  periodData: number[];
 }
 
 export const BarChart = ({ userData }: UserProps) => {
+  const periodData: number[] = userData.map((user) => user.period);
+
   return (
     <Container>
       {userData.map((user, i: number) => (
-        <Bar user={user} key={i} index={i} />
+        <Bar
+          user={user}
+          periodData={periodData}
+          key={i}
+          index={i}
+          max={0}
+          findMaxValue={function (): number {
+            throw new Error("Function not implemented.");
+          }}
+        />
       ))}
     </Container>
   );
