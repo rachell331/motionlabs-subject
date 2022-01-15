@@ -22,7 +22,8 @@ const Container = styled.nav`
 `;
 
 const Title = styled.h1`
-  ${({ theme }) => theme.wrapper}
+  ${({ theme }) => theme.wrapper};
+  background-color: #000;
   color: ${({ theme }) => theme.fontWhite};
   font-weight: 900;
   font-size: 1.75rem;
