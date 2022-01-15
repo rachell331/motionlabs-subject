@@ -1,7 +1,5 @@
-import React, { FC } from "react";
+import React from "react";
 
-interface Props {}
-
-export const PassengerList: FC = (props: Props) => {
+export const PassengerList = () => {
   return <div></div>;
 };
