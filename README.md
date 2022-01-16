@@ -4,7 +4,7 @@
 ![motionlabs](https://user-images.githubusercontent.com/88074487/149668589-8f98bb5a-5bca-488a-aa4c-20257ade02dc.gif)
 
 
-### 1. Settings
+## 1. Settings
 1. install
 
 ```json
@@ -88,41 +88,43 @@ yarn add styled-reset // reset style install
 ```
 <br />
 
-### 2. Directory Structure
-.
-├── build
-│   ├── data
-│   └── static
-├── public
-│   └── data
-└── src
-    ├── assets
-    ├── components
-    ├── pages
-    └── styles
+## 2. Directory Structure
+.<br />
+├── build <br />
+│   ├── data <br />
+│   └── static <br />
+├── public <br />
+│   └── data <br />
+└── src <br />
+    ├── assets <br />
+    ├── components <br />
+    ├── pages <br />
+    └── styles <br />
 
-### 3. Features
+## 3. Features
 - User Report Chart 
 - PassengerList InfiniteScroll
 
-#### 3-0 Common
-- Interface & Generic을 이용한 Type 선정
-- GlabalStyle, Themeprovieder이용하여 공통 스타일 속성 생성
-- Navigation Common Component 사용
+### 3-1. Common
+- Select Types using Interface & Generic
+- Create common style attributes using GlabalStyle, Themeprovieder이용하여 공통 스타일 속성 생성
+- Using Navigation Common Component
 
-#### 3-1. Chart
-- Axios를 이용한 data fetching
+### 3-2. Chart
+- Data Fetching with **Axios**
 - 📎 Line Chart
-  - Math.tan, Math.cos를 사용하여 기울기 계산
+  - Calculate slope using **Math.tan, Math.cos**
   - props로 전달받은 속성들을 calc()을 사용해서 position 위치, width값을 계산
+  - Calculate position & width using **calc** & attributes transferred to the **props**.
 - 📎 Bar Chart
   - apply()를 활용하여 배열의 최대값을 구함
   - 각 배열의 요소를 최대값으로 나눠 비율 계산
   - 전체 높이 * 비율로 각 막대그래프 도식화
 
-#### 3-2. InfiniteScroll
+### 3-3. InfiniteScroll
+- 
 
-### 4. Build
+## 4. Build
 ```jsx
 yarn build
 ```
