@@ -60,7 +60,7 @@ export const PassengerList = () => {
     if (scrollTop + clientHeight >= scrollHeight && isLoading === false) {
       moreFetchData();
     }
-  }, []);
+  }, [isLoading]);
 
   // Data fetching
   useEffect(() => {
@@ -82,8 +82,9 @@ export const PassengerList = () => {
       )
       .then((res) => {
         const result = res.data.data;
+        setIsLoading(false);
         setPassengerData((prev) => [...prev, ...result]);
-        setPageNum(pageNum + 1);
+        setPageNum((prev) => prev + 1);
         setIsLoading(true);
       })
       .catch((err) => {
@@ -93,7 +94,7 @@ export const PassengerList = () => {
 
   useEffect(() => {
     getFetchData();
-  }, [infiniteScroll]);
+  }, []);
 
   useEffect(() => {
     window.addEventListener("scroll", infiniteScroll, true);
