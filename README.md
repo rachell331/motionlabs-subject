@@ -3,7 +3,6 @@
 
 
 ### 1. Settings
-- CRA+TS 타입스크립트 초기 세팅과정
 1. install
 
 ```json
@@ -85,12 +84,14 @@ yarn add react-router-dom @types/react-router-dom  //router
 yarn add styled-components @types/styled-components //style components
 yarn add styled-reset // reset style install
 ```
-
 <br />
+
 ### 2. Directory Structure
 
 
 ### 3. Features
+- User Report Chart 
+
 #### 3-1. Chart
 #### 3-2. InfiniteScroll
 
