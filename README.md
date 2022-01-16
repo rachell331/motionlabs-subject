@@ -1,7 +1,6 @@
 # Morionlabs subject
-✨ **웹 페이지에서 보기** : https://motionlabs-subject.netlify.app/ <br/>
-✨ 
-![motionlabs](https://user-images.githubusercontent.com/88074487/149668589-8f98bb5a-5bca-488a-aa4c-20257ade02dc.gif)
+✨ ![웹페이에서보기](https://motionlabs-subject.netlify.app/) <br/>
+✨ ![motionlabs](https://user-images.githubusercontent.com/88074487/149668589-8f98bb5a-5bca-488a-aa4c-20257ade02dc.gif)
 
 
 ## 1. Settings
