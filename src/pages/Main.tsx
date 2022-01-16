@@ -23,6 +23,7 @@ export const Main = () => {
 
 const Container = styled.div`
   ${({ theme }) => theme.wrapper};
+  margin-top: 70px;
   height: 100vh;
   padding: 60px 40px 0;
 `;
