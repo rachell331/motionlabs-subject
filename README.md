@@ -1,5 +1,5 @@
 # Morionlabs subject
-✨ **웹 페이지에서 보기** : https://motionlabs-subject.netlify.app/
+✨ **웹 페이지에서 보기** : https://motionlabs-subject.netlify.app/ <br/>
 ✨ 
 ![motionlabs](https://user-images.githubusercontent.com/88074487/149668589-8f98bb5a-5bca-488a-aa4c-20257ade02dc.gif)
 
@@ -89,17 +89,19 @@ yarn add styled-reset // reset style install
 <br />
 
 ## 2. Directory Structure
-.<br />
-├── build <br />
-│   ├── data <br />
-│   └── static <br />
-├── public <br />
-│   └── data <br />
-└── src <br />
-    ├── assets <br />
-    ├── components <br />
-    ├── pages <br />
-    └── styles <br />
+```
+.
+├── build
+│   ├── data
+│   └── static
+├── public
+│   └── data
+└── src
+    ├── assets
+    ├── components
+    ├── pages
+    └── styles
+```
 
 ## 3. Features
 - User Report Chart 
@@ -112,17 +114,25 @@ yarn add styled-reset // reset style install
 
 ### 3-2. Chart
 - Data Fetching with **Axios**
-- 📎 Line Chart
+- 📎 **Line Chart**
   - Calculate slope using **Math.tan, Math.cos**
   - props로 전달받은 속성들을 calc()을 사용해서 position 위치, width값을 계산
   - Calculate position & width using **calc** & attributes transferred to the **props**.
-- 📎 Bar Chart
-  - apply()를 활용하여 배열의 최대값을 구함
-  - 각 배열의 요소를 최대값으로 나눠 비율 계산
-  - 전체 높이 * 비율로 각 막대그래프 도식화
+- 📎 **Bar Chart**
+  - Get maximum vale of array : using **apply()**
+  - Calculate the ratio by dividing the elements in each array by the maximum value.
+  - Each Diagram Bar : [Total height * ratio]
 
 ### 3-3. InfiniteScroll
-- 
+- When the user's scroll touches the floor, add data.
+- 📎 **moreFetchData function**
+  - Get additional data when scrolling.
+- 📎 **infiniteScroll function**
+  - Reuse the funcion **useCallback**
+  - Using **scrollTop, scrollHeight, clientHeight** : When `scrollTop+scrollHeight >= clientHeight` Callback function execution.
+- 📎 **getFetchData function**
+  - Insert data that is called **useEffect()**
+  - Save data received through **axios** in the `result` variable, increase by pageNumber + 1
 
 ## 4. Build
 ```jsx
