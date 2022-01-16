@@ -110,14 +110,13 @@ yarn add styled-reset // reset style install
 
 ### 3-1. Common
 - Select Types using Interface & Generic
-- Create common style attributes using GlabalStyle, Themeprovieder이용하여 공통 스타일 속성 생성
+- Create common style attributes using GlabalStyle, Themeprovieder
 - Using Navigation Common Component
 
 ### 3-2. Chart
 - Data Fetching with **Axios**
 - 📎 **Line Chart**
   - Calculate slope using **Math.tan, Math.cos**
-  - props로 전달받은 속성들을 calc()을 사용해서 position 위치, width값을 계산
   - Calculate position & width using **calc** & attributes transferred to the **props**.
 - 📎 **Bar Chart**
   - Get maximum vale of array : using **apply()**
