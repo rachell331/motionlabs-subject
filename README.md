@@ -8,7 +8,7 @@
 ## 1. Settings
 1. install
 
-```json
+```jsx
 yarn create react-app my-app --template typescript
 ```
 
